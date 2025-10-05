@@ -1,0 +1,147 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import ContactCTA from "../components/ContactCTA.astro";
+import Hero from "../components/Hero.astro";
+---
+
+<BaseLayout title="à propos | Fonlebeck Ronald" description="">
+  <div class="stack gap-20">
+    <main class="wrapper about">
+      <Hero title="Mon parcours" tagline="" />
+
+      <section>
+        <h2 class="section-title">Expérience</h2>
+        <div class="content">
+          <p>
+            Après avoir terminé mes études d'informatique, j'ai directement
+            travaillé comme consultant intéropérabilité chez un éditeur
+            logiciel.
+          </p>
+          </br>
+          <p>
+            Mon rôle était d'accompagner les clients sur la totalité de leur
+            projet d'intégration du logiciel de gestion des repas à leur système
+            d'information. Cela part de l'avant vente afin de bien comprendre le
+            besoin du client jusqu'à la mise en production et le début de la
+            maintenance applicative en passant par les tests techniques.
+          </p>
+          </br>
+          <p>
+            J'ai pu accompagner des clients de taille importantes ( CHU ) et
+            notament pu mener à bien des projets avec les hôpitaux militaires.
+          </p>
+          </br>
+          <p>
+            Ce poste m'a permis de bien comprendre comment pouvait se structurer
+            un projet, tout en intervenant également comme acteur technique sur
+            celui-ci.
+          </p>
+          <p></p>
+          </br>
+          <p>
+            Aujourd'hui, je développe mon expertise sur le support intéropérabité de différents types de flux de données.
+            Grâce à mes connaissances en bases de données et en développement logiciel, je suis capable d'approfondir mes analyses lorsque cela est nécessaire, tout en maintenant un fort intérêt pour l'interopérabilité.
+          </p>
+        </br>
+          <p>
+            Enfin, j'ai un esprit curieux et diplomate.
+            J'aime apprendre de nouveaux sujets et je l'interesse à la vie du logiciel au sens large.
+          </br>
+            Je peux également intervenir autant lors de situtations de crise pour faciliter la compréhension des complexités techniques pour un client.
+          </p>
+          <p>
+            Globalement, je tente de respecter les étapes suivantes pour mener à bien mes missions :
+          
+            <ul>
+            </br>
+              <li>M'imprénier de l'aspect métier du logiciel</li>
+              <li>Comprendre l'architecture technique du logiciel à minima</li>
+              <ul>
+                <li>Modèle de données</li>
+                <li>Fontionnement technique</li>
+                <li>Environnement de déploiement et de fonctionnement</li>
+              </ul>
+              <li>Identifier les connaissances minimales pour le MCO.</li>
+            </ul>
+          </p>
+        </div>
+      </section>
+      <!-- <section>
+        <h2 class="section-title">Etude</h2>
+        <div class="content">
+          <p>Développeur web et web mobile</p>
+          <p>Gestionnaire en maintenance et support informatique</p>
+        </div>
+      </section> -->
+      <section>
+        <h2 class="section-title">Compétence</h2>
+        <div class="content">
+          <p>Javascript, Typescript, NodeJS, HTML, CSS, Vuejs, JWT, API,</p>
+          <p>PostgresSQL, SSL, Docker, GIT,GitHub, Jira, Confluence, SQL.</p>
+          <p>Linux, HL7, Oracle, Apache Tomcat, HyperV.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <ContactCTA />
+</BaseLayout>
+
+<style>
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  img {
+    margin-top: 1.5rem;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--gray-200);
+  }
+
+  .section-title {
+    grid-column-start: 1;
+    font-size: var(--text-xl);
+    color: var(--gray-0);
+  }
+
+  .content {
+    grid-column: 2 / 4;
+  }
+
+  .content :global(a) {
+    text-decoration: 1px solid underline transparent;
+    text-underline-offset: 0.25em;
+    transition: text-decoration-color var(--theme-transition);
+  }
+
+  .content :global(a:hover),
+  .content :global(a:focus) {
+    text-decoration-color: currentColor;
+  }
+
+  @media (min-width: 50em) {
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 60% 1fr;
+    }
+
+    .about > :global(:first-child) {
+      grid-column-start: 2;
+    }
+
+    section {
+      display: contents;
+      font-size: var(--text-lg);
+    }
+  }
+</style>
